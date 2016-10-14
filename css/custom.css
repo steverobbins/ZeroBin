@@ -1,0 +1,35 @@
+#aboutbox,
+h1,
+h2,
+h3,
+body > br {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer,
+.footer a {
+    color: grey;
+}
+
+div#cleartext {
+    padding: 20px;
+}
+
+body.show-paste #toolbar {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+body.show-paste #toolbar:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}

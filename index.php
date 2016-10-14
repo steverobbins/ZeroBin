@@ -408,6 +408,7 @@ function processPasteFetch($pasteid)
 $CIPHERDATA='';
 $ERRORMESSAGE='';
 $STATUS='';
+$BODYCLASS='';
 
 if (!empty($_GET['deletetoken']) && !empty($_GET['pasteid'])) // Delete an existing paste
 {
@@ -416,6 +417,7 @@ if (!empty($_GET['deletetoken']) && !empty($_GET['pasteid'])) // Delete an exist
 else if (!empty($_SERVER['QUERY_STRING']))  // Return an existing paste.
 {
     list ($CIPHERDATA, $ERRORMESSAGE, $STATUS) = processPasteFetch($_SERVER['QUERY_STRING']);    
+    $BODYCLASS = ' class="show-paste"';
 }
 
 require_once "lib/rain.tpl.class.php";
@@ -425,5 +427,6 @@ $page->assign('CIPHERDATA',htmlspecialchars($CIPHERDATA,ENT_NOQUOTES));  // We e
 $page->assign('VERSION',$VERSION);
 $page->assign('ERRORMESSAGE',$ERRORMESSAGE);
 $page->assign('STATUS',$STATUS);
+$page->assign('BODYCLASS',$BODYCLASS);
 $page->draw('page');
 ?>

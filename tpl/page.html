@@ -3,6 +3,7 @@
 <title>ZeroBin</title>
 <meta name="robots" content="noindex" />
 <link type="text/css" rel="stylesheet" href="css/zerobin.css?{$VERSION|rawurlencode}#" /> 
+<link type="text/css" rel="stylesheet" href="css/custom.css?{$VERSION|rawurlencode}#" /> 
 <script src="js/jquery.js?{$VERSION|rawurlencode}#"></script>
 <script src="js/sjcl.js?{$VERSION|rawurlencode}#"></script>
 <script src="js/base64.js?{$VERSION|rawurlencode}#"></script>
@@ -21,7 +22,7 @@
 <![endif]-->
 
 </head>
-  <body>
+  <body{$BODYCLASS}>
       <div id="aboutbox">
           ZeroBin is a minimalist, opensource online pastebin where the server has zero knowledge of pasted data.
           Data is encrypted/decrypted <i>in the browser</i> using 256 bits AES. 
@@ -84,5 +85,8 @@
         <div id="comments"></div>
     </div>
     <div id="cipherdata" style="display:none;">{$CIPHERDATA}</div>
+    <div class="footer">
+      More about <a href="http://sebsauvage.net/wiki/doku.php?id=php:zerobin" target="_blank">ZeroBin</a>
+    </div>
   </body>
 </html>
